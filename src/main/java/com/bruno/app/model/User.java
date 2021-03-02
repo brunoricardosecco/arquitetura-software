@@ -1,19 +1,19 @@
 package com.bruno.app.model;
 
-public class User {
-    private String name;
+public class Usuario {
+    private String nome;
     private String id;
 
-    public User(String name) {
-        this.name = name;
+    public Usuario(String name) {
+        this.nome = name;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getId() {
