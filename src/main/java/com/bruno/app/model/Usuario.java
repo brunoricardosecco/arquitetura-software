@@ -4,8 +4,8 @@ public class Usuario {
     private String nome;
     private String id;
 
-    public Usuario(String name) {
-        this.nome = name;
+    public Usuario(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
