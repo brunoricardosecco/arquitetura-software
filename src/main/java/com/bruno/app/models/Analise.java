@@ -19,6 +19,12 @@ public class Analise {
     private Double enxofre;
     private Double aluminio;
     private Double HAL;
+    private Double fosforoIdeal;
+    private Double potassioIdeal;
+    private Double calcioIdeal;
+    private Double magnesioIdeal;
+    private Double enxofreIdeal;
+    private Double aluminioIdeal;
 
     public Integer getNumTalhao() {
         return numTalhao;
@@ -146,5 +152,88 @@ public class Analise {
 
     public void setHAL(Double HAL) {
         this.HAL = HAL;
+    }
+
+    public Double getFosforoIdeal() {
+        return fosforoIdeal;
+    }
+
+    public Double getPotassioIdeal() {
+        return potassioIdeal;
+    }
+
+    public Double getCalcioIdeal() {
+        return calcioIdeal;
+    }
+
+    public Double getMagnesioIdeal() {
+        return magnesioIdeal;
+    }
+
+    public Double getEnxofreIdeal() {
+        return enxofreIdeal;
+    }
+
+    public Double getAluminioIdeal() {
+        return aluminioIdeal;
+    }
+
+    public Double calculaFosforoIdeal(Integer texturaSolo) {
+        switch (texturaSolo) {
+            case 1:
+                return 9.0;
+            case 2:
+                return 12.0;
+            default:
+                return 0.0;
+        }
+    }
+
+    public Double calculaPotassioIdeal(Integer texturaSolo) {
+        switch (texturaSolo) {
+            case 1:
+                return 0.35;
+            case 2:
+                return 0.25;
+            default:
+                return 0.0;
+        }
+    }
+
+    public Double calculaCalcioIdeal(Integer texturaSolo) {
+        switch (texturaSolo) {
+            case 1:
+                return 6.0;
+            case 2:
+                return 4.0;
+            default:
+                return 0.0;
+        }
+    }
+
+    public Double calculaMagnesioIdeal(Integer texturaSolo) {
+        switch (texturaSolo) {
+            case 1:
+                return 1.5;
+            case 2:
+                return 1.0;
+            default:
+                return 0.0;
+        }
+    }
+
+    public Double calculaEnxofreIdeal(Integer texturaSolo) {
+        switch (texturaSolo) {
+            case 1:
+                return 9.0;
+            case 2:
+                return 6.0;
+            default:
+                return 0.0;
+        }
+    }
+
+    public Double calculaAluminioIdeal() {
+        return 0.0;
     }
 }
