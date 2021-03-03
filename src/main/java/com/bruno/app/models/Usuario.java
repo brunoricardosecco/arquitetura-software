@@ -1,4 +1,4 @@
-package com.bruno.app.model;
+package com.bruno.app.models;
 
 public class Usuario {
     private String nome;
