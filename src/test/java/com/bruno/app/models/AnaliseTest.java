@@ -37,4 +37,8 @@ public class AnaliseTest extends TestCase {
     public void testCalculaAluminioIdeal() {
         assertEquals(0.0, new Analise().calculaAluminioIdeal());
     }
+
+    public void testCalculaAluminioHidrogenioIdeal() {
+        assertEquals(0.0, new Analise().calculaAluminioHidrogenioIdeal());
+    }
 }
