@@ -64,4 +64,8 @@ public class Analise {
     public Double calculaAluminioIdeal() {
         return 0.0;
     }
+
+    public Double calculaAluminioHidrogenioIdeal() {
+        return 0.0;
+    }
 }
