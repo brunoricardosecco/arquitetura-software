@@ -1,44 +1,27 @@
 package com.bruno.app.models;
 
+import com.bruno.app.enums.TexturaSolo;
 import junit.framework.TestCase;
 
 public class AnaliseTest extends TestCase {
 
-    public void testCalculaFosforoIdeal() {
-        assertEquals(9.0, new Analise().calculaFosforoIdeal(1));
-        assertEquals(12.0, new Analise().calculaFosforoIdeal(2));
-        assertEquals(0.0, new Analise().calculaFosforoIdeal(3));
+    public void testSoloArgilosoValoresIdeais() {
+        assertEquals(9.0, new Analise(TexturaSolo.ARGILOSO).calculaFosforoIdeal());
+        assertEquals(0.35, new Analise(TexturaSolo.ARGILOSO).calculaPotassioIdeal());
+        assertEquals(6.0, new Analise(TexturaSolo.ARGILOSO).calculaCalcioIdeal());
+        assertEquals(1.5, new Analise(TexturaSolo.ARGILOSO).calculaMagnesioIdeal());
+        assertEquals(9.0, new Analise(TexturaSolo.ARGILOSO).calculaEnxofreIdeal());
+        assertEquals(0.0, new Analise(TexturaSolo.ARGILOSO).calculaAluminioIdeal());
+        assertEquals(0.0, new Analise(TexturaSolo.ARGILOSO).calculaAluminioHidrogenioIdeal());
     }
 
-    public void testCalculaPotassioIdeal() {
-        assertEquals(0.35, new Analise().calculaPotassioIdeal(1));
-        assertEquals(0.25, new Analise().calculaPotassioIdeal(2));
-        assertEquals(0.0, new Analise().calculaPotassioIdeal(3));
-    }
-
-    public void testCalculaCalcioIdeal() {
-        assertEquals(6.0, new Analise().calculaCalcioIdeal(1));
-        assertEquals(4.0, new Analise().calculaCalcioIdeal(2));
-        assertEquals(0.0, new Analise().calculaCalcioIdeal(3));
-    }
-
-    public void testCalculaMagnesioIdeal() {
-        assertEquals(1.5, new Analise().calculaMagnesioIdeal(1));
-        assertEquals(1.0, new Analise().calculaMagnesioIdeal(2));
-        assertEquals(0.0, new Analise().calculaMagnesioIdeal(3));
-    }
-
-    public void testCalculaEnxofreIdeal() {
-        assertEquals(9.0, new Analise().calculaEnxofreIdeal(1));
-        assertEquals(6.0, new Analise().calculaEnxofreIdeal(2));
-        assertEquals(0.0, new Analise().calculaEnxofreIdeal(3));
-    }
-
-    public void testCalculaAluminioIdeal() {
-        assertEquals(0.0, new Analise().calculaAluminioIdeal());
-    }
-
-    public void testCalculaAluminioHidrogenioIdeal() {
-        assertEquals(0.0, new Analise().calculaAluminioHidrogenioIdeal());
+    public void testSoloTexturaMediaIdeais() {
+        assertEquals(12.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaFosforoIdeal());
+        assertEquals(0.25, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaPotassioIdeal());
+        assertEquals(4.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaCalcioIdeal());
+        assertEquals(1.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaMagnesioIdeal());
+        assertEquals(6.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaEnxofreIdeal());
+        assertEquals(0.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaAluminioIdeal());
+        assertEquals(0.0, new Analise(TexturaSolo.TEXTURA_MEDIA).calculaAluminioHidrogenioIdeal());
     }
 }
