@@ -4,11 +4,13 @@ public class CorrecaoPotassio {
     private Double teorPotassioAtualNaCTC;
     private Double ctcCmol;
     private Double teorPotassioDesejadoNaCTC;
+    private Integer texturaSolo;
 
-    public CorrecaoPotassio(Double teorPotassioAtualNaCTC, Double ctcCmol, Double teorPotassioDesejadoNaCTC) {
+    public CorrecaoPotassio(Double teorPotassioAtualNaCTC, Double ctcCmol, Double teorPotassioDesejadoNaCTC, Integer texturaSolo) {
         this.teorPotassioAtualNaCTC = teorPotassioAtualNaCTC;
         this.ctcCmol = ctcCmol;
         this.teorPotassioDesejadoNaCTC = teorPotassioDesejadoNaCTC;
+        this.texturaSolo = texturaSolo;
     }
 
     public Double calculaParticipacaoAtualDoPotassioNaCTC() {
@@ -17,5 +19,16 @@ public class CorrecaoPotassio {
 
     public Double calculaParticipacaoDoPotassioNaCTCAposCorrecao() {
         return teorPotassioDesejadoNaCTC;
+    }
+
+    public Double calculaParticipacaoPotassioIdealNaCTC() {
+        switch (texturaSolo) {
+            case 1:
+                return 3.0;
+            case 2:
+                return 3.0;
+            default:
+                return 0.0;
+        }
     }
 }
