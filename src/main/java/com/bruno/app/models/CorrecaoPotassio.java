@@ -6,14 +6,16 @@ public class CorrecaoPotassio {
     private Integer texturaSolo;
     private Double teorAtualPotassioNoSolo;
     private Integer fontePotassio;
+    private Double valorFontePorTonelada;
     private  final Double eficienciaPotassio = 0.85;
 
-    public CorrecaoPotassio(Double ctcCmol, Double teorPotassioDesejadoNaCTC, Integer texturaSolo, Double teorAtualPotassioNoSolo, Integer fontePotassio) {
+    public CorrecaoPotassio(Double ctcCmol, Double teorPotassioDesejadoNaCTC, Integer texturaSolo, Double teorAtualPotassioNoSolo, Integer fontePotassio, Double valorFontePorTonelada) {
         this.ctcCmol = ctcCmol;
         this.teorPotassioDesejadoNaCTC = teorPotassioDesejadoNaCTC;
         this.texturaSolo = texturaSolo;
         this.teorAtualPotassioNoSolo = teorAtualPotassioNoSolo;
         this.fontePotassio = fontePotassio;
+        this.valorFontePorTonelada = valorFontePorTonelada;
     }
 
     public Double calculaParticipacaoAtualDoPotassioNaCTC() {
@@ -78,4 +80,8 @@ public class CorrecaoPotassio {
         return calculaValorDeK2OConsiderandoEficienciaPotassio() * 100 / calculaTeorDeK2ODaFonteDePotassio();
     }
 
+    public Double calculaCustoPorHa() {
+        Double kgAlPotassio = (calculaValorDeK2OConsiderandoEficienciaPotassio() * 100 / calculaTeorDeK2ODaFonteDePotassio()) * 2.42;
+        return (valorFontePorTonelada * kgAlPotassio / 1000) / 2.42;
+    }
 }
