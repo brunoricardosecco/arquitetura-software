@@ -45,9 +45,6 @@ public class CorrecaoPotassio {
     }
 
     private Double calculaCmolDm3DeKEmMgDm3DeK() {
-        if (calculaNecessidadeDeK() < 0.01) {
-            return 0.0;
-        }
         return calculaNecessidadeDeK() * 39.1 * 10;
     }
 
