@@ -1,15 +1,18 @@
 package com.bruno.app.models;
 
+import com.bruno.app.enums.FontePotassio;
+import com.bruno.app.enums.TexturaSolo;
+
 public class CorrecaoPotassio {
     private Double ctcCmol;
     private Double teorPotassioDesejadoNaCTC;
-    private Integer texturaSolo;
+    private TexturaSolo texturaSolo;
     private Double teorAtualPotassioNoSolo;
-    private Integer fontePotassio;
+    private FontePotassio fontePotassio;
     private Double valorFontePorTonelada;
     private  final Double eficienciaPotassio = 0.85;
 
-    public CorrecaoPotassio(Double ctcCmol, Double teorPotassioDesejadoNaCTC, Integer texturaSolo, Double teorAtualPotassioNoSolo, Integer fontePotassio, Double valorFontePorTonelada) {
+    public CorrecaoPotassio(Double ctcCmol, Double teorPotassioDesejadoNaCTC, TexturaSolo texturaSolo, Double teorAtualPotassioNoSolo, FontePotassio fontePotassio, Double valorFontePorTonelada) {
         this.ctcCmol = ctcCmol;
         this.teorPotassioDesejadoNaCTC = teorPotassioDesejadoNaCTC;
         this.texturaSolo = texturaSolo;
@@ -28,9 +31,9 @@ public class CorrecaoPotassio {
 
     public Double calculaParticipacaoPotassioIdealNaCTC() {
         switch (texturaSolo) {
-            case 1:
+            case ARGILOSO:
                 return 3.0;
-            case 2:
+            case TEXTURA_MEDIA:
                 return 3.0;
             default:
                 return 0.0;
@@ -63,13 +66,13 @@ public class CorrecaoPotassio {
 
     private Double calculaTeorDeK2ODaFonteDePotassio() {
         switch (fontePotassio) {
-            case 1:
+            case CLORETO_DE_POTASSIO:
                 return 58.0;
-            case 2:
+            case SULFATO_DE_POTASSIO:
                 return 52.0;
-            case 3:
+            case SULFATO_DE_POTASSIO_MAGNESIO:
                 return 22.0;
-            case 4:
+            case OUTRO:
                 return 44.0;
             default:
                 return 0.0;
