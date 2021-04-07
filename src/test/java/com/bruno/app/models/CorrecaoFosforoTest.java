@@ -1,9 +1,10 @@
 package com.bruno.app.models;
 
+import com.bruno.app.enums.FonteFosforo;
 import junit.framework.TestCase;
 
 public class CorrecaoFosforoTest extends TestCase {
-    CorrecaoFosforo correcaoFosforoMock = new CorrecaoFosforo(12.0, 8.59, 70.0, 1, 1000.0);
+    CorrecaoFosforo correcaoFosforoMock = new CorrecaoFosforo(12.0, 8.59, 70.0, FonteFosforo.SUPERFOSFATO_SIMPLES, 1000.0);
 
     public void testCalculaQuantidadeAAplicar() {
         assertEquals(123.95079365079366, correcaoFosforoMock.calculaQuantidadeAAplicar());
