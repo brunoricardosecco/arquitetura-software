@@ -35,14 +35,14 @@ public class CorrecaoFosforo {
 
     public Double calculaPercentualTeorFonteP2O5() {
         switch (fonteDeFosforo) {
-            case SUPERFOSFATO_SIMPLES:
-                return 18.0;
             case SUPERFOSFATO_TRIPLO:
                 return 41.0;
             case MAP:
                 return 48.0;
             case DAP:
                 return 45.0;
+            case SUPERFOSFATO_SIMPLES:
+            case MULTIFOSFATO_MAGNESIANO:
             case YOORIN:
                 return 18.0;
             case FOSFATO_ARAD:
@@ -57,8 +57,6 @@ public class CorrecaoFosforo {
                 return 18.5;
             case ACIDO_FOSFORICO:
                 return 52.0;
-            case MULTIFOSFATO_MAGNESIANO:
-                return 18.0;
             default:
                 return 0.0;
         }
@@ -108,10 +106,8 @@ public class CorrecaoFosforo {
             this.teorDeP2O5EmFonteFosforo = teorDeP2O5EmFonteFosforo;
             this.quantidadeDeFosforoAAplicar = quantidadeDeFosforoAAplicar;
             switch (fonteDeFosforo) {
-                case SUPERFOSFATO_SIMPLES:
-                    this.nomeResidual = "Enxofre";
-                    break;
                 case MULTIFOSFATO_MAGNESIANO:
+                case SUPERFOSFATO_SIMPLES:
                     this.nomeResidual = "Enxofre";
                     break;
                 case YOORIN:
@@ -161,39 +157,19 @@ public class CorrecaoFosforo {
             this.fonteDeFosforo = fonteDeFosforo;
             this.teorDeP2O5EmFonteFosforo = teorDeP2O5EmFonteFosforo;
             switch (fonteDeFosforo) {
-                case SUPERFOSFATO_SIMPLES:
-                    this.nomeResidual = "Cálcio";
-                    break;
-                case SUPERFOSFATO_TRIPLO:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case MAP:
-                    this.nomeResidual = "Nitrogênio";
-                    break;
                 case DAP:
                     this.nomeResidual = "Nitrogênio";
                     break;
+                case SUPERFOSFATO_SIMPLES:
+                case SUPERFOSFATO_TRIPLO:
                 case YOORIN:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case FOSFATO_ARAD:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case FOSFATO_GAFSA:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case FOSFATO_DAOUI:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case FOSFATO_PATOS_MINAS:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case ESCORIA_DE_THOMAS:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case ACIDO_FOSFORICO:
-                    this.nomeResidual = "Cálcio";
-                    break;
                 case MULTIFOSFATO_MAGNESIANO:
                     this.nomeResidual = "Cálcio";
                     break;
@@ -209,9 +185,6 @@ public class CorrecaoFosforo {
         public Double calculaKgHaPrimeiroResidual() {
             Double depoisDeCalculado;
             switch (fonteDeFosforo) {
-                case SUPERFOSFATO_SIMPLES:
-                    depoisDeCalculado = (calculaKgAlResiduo() * 0.28);
-                    break;
                 case SUPERFOSFATO_TRIPLO:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.2);
                     break;
@@ -221,20 +194,17 @@ public class CorrecaoFosforo {
                 case DAP:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.16);
                     break;
+                case SUPERFOSFATO_SIMPLES:
                 case YOORIN:
+                case FOSFATO_PATOS_MINAS:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.28);
                     break;
                 case FOSFATO_ARAD:
-                    depoisDeCalculado = (calculaKgAlResiduo() * 0.52);
-                    break;
                 case FOSFATO_GAFSA:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.52);
                     break;
                 case FOSFATO_DAOUI:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.45);
-                    break;
-                case FOSFATO_PATOS_MINAS:
-                    depoisDeCalculado = (calculaKgAlResiduo() * 0.28);
                     break;
                 case ESCORIA_DE_THOMAS:
                     depoisDeCalculado = (calculaKgAlResiduo() * 0.44);
