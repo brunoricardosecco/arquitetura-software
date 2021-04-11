@@ -1,3 +1,7 @@
+// Código utilizado como referência desenvolvido pelo professor Gabriel Costa Silva
+// O código original pode ser encontrado no link abaixo
+// https://github.com/gabrielcostasilva/sa-soilcorrection/blob/main/src/main/java/edu/utfpr/cp/dacom/sa/soilcorrection/EquilibrioCorrecaoCTC.java
+
 package com.bruno.app.models;
 
 public class CorrecaoCTC {
