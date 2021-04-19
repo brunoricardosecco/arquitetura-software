@@ -21,10 +21,10 @@ public class CorrecaoPotassioTest extends TestCase {
     }
 
     public void testCalculaQuantidadeAAplicar() {
-        assertEquals(3704.923636363637, correcaoPotassioMock.calculaQuantidadeAAplicar());
+        assertEquals(3704.923636363636, correcaoPotassioMock.calculaQuantidadeAAplicar());
     }
 
     public void testCalculaCustoPorHa() {
-        assertEquals(51.86893090909091, correcaoPotassioMock.calculaCustoPorHa());
+        assertEquals(51.868930909090906, correcaoPotassioMock.calculaCustoPorHa());
     }
 }
