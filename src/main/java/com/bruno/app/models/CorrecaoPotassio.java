@@ -30,14 +30,7 @@ public class CorrecaoPotassio {
     }
 
     public Double calculaParticipacaoPotassioIdealNaCTC() {
-        switch (texturaSolo) {
-            case ARGILOSO:
-                return 3.0;
-            case TEXTURA_MEDIA:
-                return 3.0;
-            default:
-                return 0.0;
-        }
+        return 3.0;
     }
 
     private Double calculaNecessidadeDeK() {
@@ -57,7 +50,7 @@ public class CorrecaoPotassio {
     }
 
     private Double calculaValorDeK2OConsiderandoEficienciaPotassio() {
-        return calculaKgHaDeKEmK2O() * 100 / eficienciaPotassio / 100;
+        return calculaKgHaDeKEmK2O() / eficienciaPotassio;
     }
 
 
