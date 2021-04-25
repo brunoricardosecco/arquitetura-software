@@ -6,12 +6,11 @@ Antes da refatoração dos componentes do código, ao executar o comando cloc, o
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Java                            13            100             13            513
-XML                             12              0              0            474
-Maven                            1              6              4             65
+Java                             8             73              7            403
 -------------------------------------------------------------------------------
-SUM:                            26            106             17           1052
+SUM:                             8             73              7            403
 -------------------------------------------------------------------------------
+
 ```
 
 Com um total de 1052 linhas de código. Após as refatorações de algumas funções, obteve-se a diminuição de algumas funções, ficando com 1046 linhas de código, como consta na tabela abaixo:
