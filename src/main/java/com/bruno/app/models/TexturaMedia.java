@@ -2,30 +2,29 @@ package com.bruno.app.models;
 
 import com.bruno.app.models.interfaces.TexturaSolo;
 
-public class Argiloso implements TexturaSolo {
-
+public class TexturaMedia implements TexturaSolo {
     @Override
     public Double getValorIdealFosforo() {
-        return 9.0;
+        return 12.0;
     }
 
     @Override
     public Double getValorIdealPotassio() {
-        return 0.35;
+        return 0.25;
     }
 
     @Override
     public Double getValorIdealCalcio() {
-        return 6.0;
+        return 4.0;
     }
 
     @Override
     public Double getValorIdealMagnesio() {
-        return 1.5;
+        return 1.0;
     }
 
     @Override
     public Double getValorIdealEnxofre() {
-        return 9.0;
+        return 6.0;
     }
 }
