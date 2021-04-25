@@ -18,16 +18,10 @@ public class CorrecaoCTC {
     }
 
     public Double calculaMOPercentual(Double mo) {
-        if (mo > 0.01) {
             return mo / 10;
-        }
-        return 0.0;
     }
 
     public Double calculaCarbono(Double mo) {
-        if (mo < 0.01) {
-            return 0.0;
-        }
         return calculaMOPercentual(mo) / 1.72 * 10;
     }
 }
