@@ -27,8 +27,6 @@ SUM:                            11             86              7            420
 
 Após a refatoração da classe de Analise, obteve-se um pequeno aumento nas linhas de código do projeto causados pelas interfaces e novas classes criadas, e apesar de haverem mais linhas, condicionais foram removidos aplicando o design pattern Strategy, facilitando a manutenibilidade. [Link da alteração](https://github.com/brunoricardosecco/arquitetura-software/commit/0d5306cc8d0541f2dc9917674aa9fd732bfb6c18)
 
-Após a refatoração da classe de CorrecaoCTC, obteve-se...
-
 ```
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
