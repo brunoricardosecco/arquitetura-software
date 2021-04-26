@@ -1,4 +1,4 @@
-package com.bruno.app.models;
+package com.bruno.app.models.texturasSolo;
 
 import com.bruno.app.models.interfaces.TexturaSolo;
 

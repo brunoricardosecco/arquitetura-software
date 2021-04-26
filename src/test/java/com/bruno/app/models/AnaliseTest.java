@@ -1,6 +1,7 @@
 package com.bruno.app.models;
 
-import com.bruno.app.enums.TexturaSolo;
+import com.bruno.app.models.texturasSolo.Argiloso;
+import com.bruno.app.models.texturasSolo.TexturaMedia;
 import junit.framework.TestCase;
 
 public class AnaliseTest extends TestCase {
