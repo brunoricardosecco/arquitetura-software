@@ -55,18 +55,7 @@ public class CorrecaoPotassio {
 
 
     private Double calculaTeorDeK2ODaFonteDePotassio() {
-        switch (fontePotassio) {
-            case CLORETO_DE_POTASSIO:
-                return 58.0;
-            case SULFATO_DE_POTASSIO:
-                return 52.0;
-            case SULFATO_DE_POTASSIO_MAGNESIO:
-                return 22.0;
-            case OUTRO:
-                return 44.0;
-            default:
-                return 0.0;
-        }
+        return fontePotassio.getValorFonte();
     }
 
     public Double calculaQuantidadeAAplicar() {
